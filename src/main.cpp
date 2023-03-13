@@ -1,30 +1,13 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <Firebase_ESP_Client.h>
-// Provide the token generation process info.
 #include "addons/TokenHelper.h"
-// Provide the RTDB payload printing info and other helper functions.
 #include "addons/RTDBHelper.h"
+#include <IOT.h>
 
-// Insert network credentials
-#define WIFI_SSID "atilimited.net2"
-#define WIFI_PASSWORD "AtiL2@2021#"
-
-// Insert Firebase project API Key
-#define API_KEY "AIzaSyBXE9yQQHkpBflZT7QTyHC89N5njDfUK_c"
-
-// Insert RTDB URLefine the RTDB URL */
-#define DATABASE_URL "https://smartthings-56460-default-rtdb.asia-southeast1.firebasedatabase.app/"
-
-// Insert Authorized Email and Corresponding Password
-#define USER_EMAIL "rabbi.iot@gmail.com"
-#define USER_PASSWORD "12345678"
-
-#define led 2
 byte ledStatus;
 String path;
 
-// Define Firebase objects
 FirebaseData fbdos;
 FirebaseAuth auth;
 FirebaseConfig config;
